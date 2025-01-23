@@ -2,11 +2,14 @@ import type { Config } from "tailwindcss";
 import daisyui from "daisyui";
 
 export default {
-	content: ["./src/**/*.{html,js,svelte,ts}"],
+  content: ["./src/**/*.{html,js,svelte,ts}"],
 
-	theme: {
-		extend: {},
-	},
+  theme: {
+    extend: {},
+  },
 
-	plugins: [daisyui],
+  plugins: [daisyui],
+  daisyui: {
+    logs: false,
+  },
 } satisfies Config;

@@ -1,0 +1,5 @@
+[[language]]
+name = "svelte"
+formatter.command = "prettier"
+formatter.args = ["--parser", "svelte"]
+language-servers = ["svelteserver", "tailwindcss-language-server"]
