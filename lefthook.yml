@@ -1,0 +1,12 @@
+pre-commit:
+  parallel: true
+  commands:
+    prettier:
+      glob: "*"
+      run: bunx prettier --write {staged_files}
+      stage_fixed: true
+    biomelint:
+      tags: biome lint
+      glob: "*"
+      run: biome lint --fix {staged_files}
+      stage_fixed: true
