@@ -5,6 +5,8 @@
   $inspect(count);
 </script>
 
+<a class="btn btn-primary" href="/">Go Back</a>
+
 <center>
   <div>
     <span class="text-5xl">
