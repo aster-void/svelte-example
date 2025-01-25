@@ -1,8 +1,6 @@
 <script lang="ts">
   let count = $state(0);
   const double = $derived(count * 2); // null * 2 = 0, wtf js
-
-  $inspect(count);
 </script>
 
 <a class="btn btn-primary" href="/">Go Back</a>
