@@ -6,9 +6,9 @@
 
   // client-only fetching
   onMount(() => {
-    promise = fetch(
-      "https://advent.sveltesociety.dev/data/2023/day-one.json",
-    ).then((res) => res.json());
+    promise = fetch("https://jsonplaceholder.typicode.com/todos/1").then(
+      (res) => res.json(),
+    );
   });
 </script>
 
