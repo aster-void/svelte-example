@@ -7,9 +7,9 @@
   <a class="btn btn-primary" href="/">Go Back</a>
 </div>
 
-{@render show(1, data.stream.s1)}
-{@render show(2, data.stream.s2)}
-{@render show(5, data.stream.s5)}
+{@render show(1, data.s1)}
+{@render show(2, data.s2)}
+{@render show(3, data.s3)}
 
 {#snippet show(count: number, data: Promise<unknown>)}
   <p>

@@ -7,7 +7,7 @@ import type { PageServerLoad } from "./$types";
 export const load: PageServerLoad = () => {
   const s1 = fetch("https://jsonplaceholder.typicode.com/todos/1").then(
     async (res) => {
-      await sleep(500);
+      await sleep(1000);
       return res.json();
     },
   );
@@ -19,18 +19,17 @@ export const load: PageServerLoad = () => {
     },
   );
 
-  const s5 = fetch("https://jsonplaceholder.typicode.com/todos/5").then(
+  const s3 = fetch("https://jsonplaceholder.typicode.com/todos/3").then(
     async (res) => {
-      await sleep(5000);
+      await sleep(3000);
       return res.json();
     },
   );
 
   return {
-    stream: {
-      s1,
-      s2,
-      s5,
-    },
+    immed: Promise.resolve(),
+    s1,
+    s2,
+    s3,
   };
 };
