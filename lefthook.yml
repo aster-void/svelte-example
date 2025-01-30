@@ -1,12 +1,12 @@
 pre-commit:
   parallel: true
   commands:
-    prettier:
+    deno-fmt:
       glob: "*"
-      run: bunx prettier --write --ignore-unknown {staged_files}
+      run: deno fmt {staged_files}
       stage_fixed: true
     biomelint:
       tags: biome lint
       glob: "*"
-      run: biome lint --fix {staged_files}
+      run: biome lint --fix --staged
       stage_fixed: true
