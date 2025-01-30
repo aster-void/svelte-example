@@ -29,7 +29,9 @@
   },
   "overrides": [
     {
-      "include": ["*.svelte"],
+      "include": [
+        "*.svelte"
+      ],
       "linter": {
         "rules": {
           "style": {

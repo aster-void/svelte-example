@@ -1,7 +1,6 @@
 <script lang="ts">
-  let nestedArray: string[][] = $state([[]]);
-
-  let nextVal = $state("");
+let nestedArray: string[][] = $state([[]]);
+let nextVal = $state("");
 </script>
 
 <a class="btn btn-primary" href="/">Go Back</a>

@@ -1,7 +1,16 @@
 [[language]]
 name = "svelte"
-formatter.command = "prettier"
-formatter.args = ["--parser", "svelte"]
+# formatter = { command = "biome", args = [
+# "format",
+# "--stdin-file-path=a.svelte",
+# ] }
+formatter = { command = "deno", args = [
+  "fmt",
+  "--unstable-component",
+  "--ext",
+  "svelte",
+  "-",
+] }
 language-servers = [
   "tailwindcss-language-server",
   "svelteserver",

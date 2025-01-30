@@ -5,7 +5,9 @@
   async function fetcher() {
     if (!browser) return new Promise(() => {});
 
-    const resp = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+    const resp = await fetch(
+      "https://jsonplaceholder.typicode.com/todos/1",
+    );
     return resp.json();
   }
 </script>
