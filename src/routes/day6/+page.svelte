@@ -2,14 +2,15 @@
   import { browser } from "$app/environment";
 
   // another way for client-only fetching
-  const promise: Promise<unknown> = browser
-    ? fetch("https://jsonplaceholder.typicode.com/todos/1").then((res) =>
-        res.json(),
-      )
-    : new Promise(() => {});
+  async function fetcher() {
+    if (!browser) return new Promise(() => {});
+
+    const resp = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+    return resp.json();
+  }
 </script>
 
-{#await promise}
+{#await fetcher()}
   <span class="loading loading-spinner"></span>
 {:then data}
   {JSON.stringify(data)}
